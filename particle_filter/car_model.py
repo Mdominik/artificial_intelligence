@@ -115,7 +115,16 @@ class robot:
                       # of the robot class with the correct coordinates.
                       
     ############## ONLY ADD/MODIFY CODE ABOVE HERE ####################
-        
+def sense(self): #do not change the name of this function
+        Z = []
+        for i in range(4):
+            Z.append((atan2(landmarks[i][0] - self.y, landmarks[i][1] - self.x) - self.orientation) % (2*pi))
+        # ENTER CODE HERE
+        # HINT: You will probably need to use the function atan2()
+
+        return Z #Leave this line here. Return vector Z of 4 bearings.
+    
+            
 
 ## IMPORTANT: You may uncomment the test cases below to test your code.
 ## But when you submit this code, your test cases MUST be commented
